@@ -74,9 +74,9 @@ namespace ELibaryManagement
                 }
 
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM admin_tbl WHERE username=@0 AND password=@1;", con);
-                cmd.Parameters.AddWithValue("@0", txtLogin);
-                cmd.Parameters.AddWithValue("@1", txtPass);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM admin_tbl WHERE username=@login AND password=@pw;", con);
+                cmd.Parameters.AddWithValue("@login", txtLogin);
+                cmd.Parameters.AddWithValue("@pw", txtPass);
                 //SqlCommand cmd = new SqlCommand("SELECT * FROM admin_tbl WHERE username='"+txtLogin+"' AND password='"+ txtPass+"';", con);
                 SqlDataReader dr = cmd.ExecuteReader();
 
